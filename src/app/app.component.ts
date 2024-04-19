@@ -1,13 +1,26 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Note } from '../note';
+import { NoteInputComponent } from './note-input/note-input.component';
+import { NoteDisplayComponent } from './note-display/note-display.component';
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [NoteInputComponent, NoteDisplayComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-w2';
+
+  notes: Note[] = [];
+
+  addNote(note: Note) {
+    this.notes.push(note);
+  }
+
+  
+
+ 
 }

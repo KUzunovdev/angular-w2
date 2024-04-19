@@ -1,0 +1,12 @@
+<div>
+  <input
+    type="text"
+    [(ngModel)]="newNote.title"
+    placeholder="Enter note title"
+  />
+  <textarea
+    [(ngModel)]="newNote.content"
+    placeholder="Enter note content"
+  ></textarea>
+  <button (click)="saveNote()">Save Note</button>
+</div>
