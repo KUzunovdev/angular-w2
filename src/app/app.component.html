@@ -1,11 +1,15 @@
 <div class="app-container">
-  <app-note-input
-    [note]="selectedNote"
-    (noteAdded)="addOrUpdateNote($event)"
-  ></app-note-input>
-  <app-note-display
-    [notes]="notes"
-    (noteEdited)="setSelectedNote($event)"
-    (noteDeleted)="deleteNote($event)"
-  ></app-note-display>
+  <div class="note-input-section">
+    <app-note-input
+      [note]="selectedNote"
+      (noteAdded)="addOrUpdateNote($event)"
+    ></app-note-input>
+  </div>
+  <div class="note-list-section">
+    <app-note-display
+      [notes]="notes"
+      (noteEdited)="setSelectedNote($event)"
+      (noteDeleted)="deleteNote($event)"
+    ></app-note-display>
+  </div>
 </div>
