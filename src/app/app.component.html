@@ -1,7 +1,11 @@
 <div class="app-container">
-  <!-- Note Input Component -->
-  <app-note-input (noteAdded)="addNote($event)"></app-note-input>
-
-  <!-- Note Display Component -->
-  <app-note-display [notes]="notes"></app-note-display>
+  <app-note-input
+    [note]="selectedNote"
+    (noteAdded)="addOrUpdateNote($event)"
+  ></app-note-input>
+  <app-note-display
+    [notes]="notes"
+    (noteEdited)="setSelectedNote($event)"
+    (noteDeleted)="deleteNote($event)"
+  ></app-note-display>
 </div>
